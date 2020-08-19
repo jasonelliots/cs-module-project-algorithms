@@ -2,10 +2,24 @@
 Input: a List of integers
 Returns: a List of integers
 '''
-def product_of_all_other_numbers(arr):
-    # Your code here
 
-    pass
+#U: for a given array of numbers, produce a new array that multiplies the all of the values together EXCEPT for the value at the corresponding index
+def product_of_all_other_numbers(arr):
+    # initialize newarray
+    # loop through the original array 
+    # for each item in the array, loop through the array again and multiply the numbers together UNLESS the index is equal to that item 
+    # add that product to the newarray
+
+    newArr = []
+
+    for index, value in enumerate(arr):
+        newValue = 1 
+        for xIndex, xValue in enumerate(arr):
+            if xIndex != index:
+                newValue = newValue * xValue
+        newArr.append(newValue)
+    
+    return newArr 
 
 
 if __name__ == '__main__':
